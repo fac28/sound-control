@@ -1,6 +1,14 @@
-const ControlButton = ({control}) => {
+import { animateGameArray } from "../utils/animateGameArray"
+
+const ControlButton = ({control, gameArray, gameControls, setState}) => {
+    
   return (
-    <button type="button" className="button ">{control}</button>
+    <button 
+      type="button" 
+      className="button"
+      onClick={() => animateGameArray(gameArray, setState)}
+    >{control}
+    </button>
   )
 }
 

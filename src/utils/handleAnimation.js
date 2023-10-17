@@ -9,7 +9,6 @@ export const handleAnimation = (setState, value) => {
     }),
   }));
 
-  console.log(value);
 
   setTimeout(() => {
     setState((prevState) => ({

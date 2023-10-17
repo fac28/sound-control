@@ -6,7 +6,7 @@ import { useState } from 'react';
 function App() {
   const [state, setState] = useState({
     playerArray: [],
-    gameArray: [],
+    gameArray: [1, 4, 3, 4, 1],
     gameControls: [
       {
         colour: 'red',
@@ -45,7 +45,12 @@ function App() {
         })}
       </div>
       <div className="flex center gap">
-        <ControlButton control={'play'} />
+        <ControlButton 
+          control={'play'} 
+          gameArray={state.gameArray} 
+          gameControls={state.gameControls}
+          setState={setState}   
+        />
         <ControlButton control={'pause'} />
       </div>
     </>
