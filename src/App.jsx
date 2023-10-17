@@ -40,7 +40,7 @@ function App() {
             key={pad.index} 
             value={pad.index} 
             setState={setState} 
-            isAnimated={state.isAnimated}
+            isAnimated={pad.isAnimated}
             />;
         })}
       </div>
