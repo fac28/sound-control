@@ -1,5 +1,6 @@
 import { handleAnimation } from "../utils/handleAnimation";
-const Pad = ({ colour, setState, value, isAnimated }) => {
+
+const Pad = ({ colour, setState, value, isAnimated, isplaying }) => {
 
   const clickHandler = (event) => {
 
@@ -10,7 +11,14 @@ const Pad = ({ colour, setState, value, isAnimated }) => {
 
     handleAnimation(setState, value)
   };
-  return <button type="button" className={`pad ${colour} ${isAnimated? 'element-animate' : ''}`} value={value} onClick={clickHandler}></button>;
+  return (
+  <button 
+    type="button" 
+    className={`pad ${colour} ${isAnimated? 'element-animate' : ''}`} 
+    value={value} 
+    onClick={clickHandler}
+    >
+    </button>);
 };
 
 export default Pad;

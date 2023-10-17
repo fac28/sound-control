@@ -1,12 +1,12 @@
-import { animateGameArray } from "../utils/animateGameArray"
+import { startNewRound } from "../utils/startNewRound"
 
-const ControlButton = ({control, gameArray, gameControls, setState}) => {
+const ControlButton = ({control, gameArray, setState, state}) => {
     
   return (
     <button 
       type="button" 
       className="button"
-      onClick={() => animateGameArray(gameArray, setState)}
+      onClick={() => startNewRound(gameArray, state, setState)}
     >{control}
     </button>
   )

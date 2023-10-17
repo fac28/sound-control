@@ -9,7 +9,6 @@ export const handleAnimation = (setState, value) => {
     }),
   }));
 
-
   setTimeout(() => {
     setState((prevState) => ({
       ...prevState,
@@ -20,5 +19,5 @@ export const handleAnimation = (setState, value) => {
         return control;
       }),
     }));
-  }, 1000); // Set the duration of your animation in milliseconds (1 second in this example)
+  }, 200);
 };
