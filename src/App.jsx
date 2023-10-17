@@ -6,21 +6,48 @@ import { useState } from 'react';
 function App() {
   const [state, setState] = useState({
     playerArray: [],
-    gameArray: []
-  })
+    gameArray: [],
+    gameControls: [
+      {
+        colour: 'red',
+        index: 1,
+        isAnimated: false
+      },
+      {
+        colour: 'blue',
+        index: 2,
+        isAnimated: false
+      },
+      {
+        colour: 'green',
+        index: 3,
+        isAnimated: false
+      },
+      {
+        colour: 'yellow',
+        index: 4,
+        isAnimated: false
+      },
+    ],
+  });
   return (
     <>
       <h1>Sound Control</h1>
       <div className="flex center">
-        <Pad colour={'red'} setState={setState} state={state} />
-        <Pad colour={'blue'} setState={setState} state={state} />
-        <Pad colour={'green'} setState={setState} state={state} />
-        <Pad colour={'yellow'} setState={setState} state={state} />
+        {state.gameControls.map((pad) => {
+          return <Pad 
+            colour={pad.colour} 
+            key={pad.index} 
+            value={pad.index} 
+            setState={setState} 
+            isAnimated={state.isAnimated}
+            />;
+        })}
       </div>
-        <div className='flex center gap'>
-        <ControlButton control={'play'}/>
-        <ControlButton control={'pause'}/>
-        </div>
+      <div className="flex center gap">
+        <ControlButton control={'play'} />
+        <ControlButton control={'pause'} />
+      </div>
     </>
   );
 }

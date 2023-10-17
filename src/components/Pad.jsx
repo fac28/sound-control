@@ -1,22 +1,16 @@
-import { useState } from "react";
-
-const Pad = ({ colour, setState, state }) => {
-  const [isAnimated, setIsAnimated] = useState(false)
+import { handleAnimation } from "../utils/handleAnimation";
+const Pad = ({ colour, setState, value, isAnimated }) => {
 
   const clickHandler = (event) => {
 
     setState((prevState) => ({
       ...prevState,
-      playerArray: [...prevState.playerArray, event.target.value],
+      playerArray: [...prevState.playerArray, +event.target.value],
     }));
-    
-    setIsAnimated(true);
-    setTimeout(() => {
-      setIsAnimated(false);
-    }, 1000); 
-    
+
+    handleAnimation(setState, value)
   };
-  return <button type="button" className={`pad ${colour} ${isAnimated? 'element-animate' : ''}`} value={colour} onClick={clickHandler}></button>;
+  return <button type="button" className={`pad ${colour} ${isAnimated? 'element-animate' : ''}`} value={value} onClick={clickHandler}></button>;
 };
 
 export default Pad;
