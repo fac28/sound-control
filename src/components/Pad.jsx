@@ -3,7 +3,7 @@ import { compareArrays } from '../utils/compareArrays';
 import { startNewRound } from '../utils/startNewRound';
 import { gameOver } from '../gameOver';
 
-const Pad = ({ colour, setState, value, isAnimated, isPlaying, playerArray, gameArray, state }) => {
+const Pad = ({ colour, setState, value, isAnimated, border, playerArray, gameArray, state }) => {
   const clickHandler = (event) => {
     const newPlayerArray = [...playerArray, +event.target.value];
 
@@ -30,7 +30,7 @@ const Pad = ({ colour, setState, value, isAnimated, isPlaying, playerArray, game
   return (
     <button
       type="button"
-      className={`pad ${colour} ${isAnimated ? 'element-animate' : ''}`}
+      className={`pad ${colour} ${border} ${isAnimated ? 'element-animate' : ''}`}
       value={value}
       onClick={clickHandler}
     ></button>
