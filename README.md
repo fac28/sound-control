@@ -1,8 +1,44 @@
-# React + Vite
+# Simon Says Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Play the classic Simon Says game with a fun twist!
 
-Currently, two official plugins are available:
+Try it out [here](https://soundcontrol.netlify.app/).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Installation
+
+You can install and run the game locally by following these steps:
+
+1. Clone the repository to your local machine:
+
+```sh
+git clone https://github.com/yourusername/simon-says-game.git
+   ```
+
+2. Navigate to the project directory:
+
+```sh
+
+cd simon-says-game
+```
+
+3. Install the required dependencies:
+
+```sh
+
+npm install
+```
+
+4. Start the development server:
+
+```sh
+
+npm run dev
+```
+
+Now you can open the game in your web browser at http://localhost:3000.
+
+# How to Play
+
+Follow the game's instructions and repeat the sequence of colors and sounds. The game gets progressively more challenging as you advance.
+
+Have fun playing Simon Says!
