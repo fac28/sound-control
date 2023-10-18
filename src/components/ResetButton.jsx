@@ -1,4 +1,4 @@
-import { gameOver } from '../gameOver';
+import { gameOver } from '../utils/gameOver';
 
 const ResetButton = ({ control, setState }) => {
   return (
