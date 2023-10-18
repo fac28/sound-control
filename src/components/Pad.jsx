@@ -3,7 +3,7 @@ import { compareArrays } from '../utils/compareArrays';
 import { startNewRound } from '../utils/startNewRound';
 import { gameOver } from '../utils/gameOver';
 
-const Pad = ({ colour, setState, value, isAnimated, isPlaying, playerArray, gameArray, state, gameOver }) => {
+const Pad = ({ colour, setState, value, isAnimated, isPlaying, playerArray, gameArray, state, gameOver, border }) => {
   const clickHandler = (event) => {
     const newPlayerArray = [...playerArray, +event.target.value];
 
