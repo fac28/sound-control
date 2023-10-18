@@ -1,15 +1,18 @@
 /* css here */
 
 .pad {
+  all: unset;
   width: 5rem;
   height: 5rem;
   margin: 1rem;
   border-radius: 10px;
+  border-color: rgba(0, 0, 0, 0);
   cursor: pointer;
 }
 
 .flex {
   display: flex;
+  flex-wrap: wrap;
 }
 
 .center {
@@ -21,27 +24,51 @@
 }
 
 .red {
-  background: rgb(243, 76, 76);
+  background: rgba(243, 76, 76, 0.9);
+  box-shadow: 0px 0px 20px 5px red;
 }
 
 .blue {
-  background: rgb(65, 65, 247);
+  background: rgba(65, 65, 247, .9);
+  box-shadow: 0px 0px 20px 5px rgb(0, 0, 255);
 }
 
 .green {
-  background: rgb(73, 241, 73);
+  background: rgba(73, 241, 73, .9);
+  box-shadow: 0px 0px 20px 5px rgb(73, 241, 73);
 }
 
 .yellow {
-  background: rgb(250, 250, 53);
+  background: rgba(250, 250, 53, .9);
+  box-shadow: 0px 0px 20px 5px rgb(250, 250, 53);
+}
+
+.pink {
+  background: rgba(248, 103, 217, 0.9);
+  box-shadow: 0px 0px 20px 5px rgb(243, 76, 207);
+}
+
+.orange {
+  background: #ff8534e6;
+  box-shadow: 0px 0px 20px 5px rgb(248, 111, 20);
+}
+
+.purple {
+  background: rgba(149, 0, 255, 0.9);
+  box-shadow: 0px 0px 20px 5px rgb(149, 0, 255);
+}
+
+.black {
+  background: rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 0px 20px 5px rgb(0, 0, 0);
 }
 
 @keyframes flash {
   0% {
     opacity: 1;
   }
-  50% {
-    opacity: 0;
+  25% {
+    opacity: 0.6;
   }
   100% {
     opacity: 1;
@@ -49,5 +76,5 @@
 }
 
 .element-animate {
-  animation: flash 400ms 1;
+  animation: flash 500ms 1;
 }
