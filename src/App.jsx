@@ -29,6 +29,26 @@ function App() {
         index: 4,
         isAnimated: false,
       },
+      {
+        colour: 'pink',
+        index: 5,
+        isAnimated: false,
+      },
+      {
+        colour: 'orange',
+        index: 6,
+        isAnimated: false,
+      },
+      {
+        colour: 'purple',
+        index: 7,
+        isAnimated: false,
+      },
+      {
+        colour: 'black',
+        index: 8,
+        isAnimated: false,
+      },
     ],
   });
 
