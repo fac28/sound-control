@@ -3,6 +3,8 @@ import { animateGameArray } from "./animateGameArray";
 export const startNewRound = (gameArray, state, setState) => {
   
     const randomIndex = Math.floor(Math.random() * state.gameControls.length) +1;
+  
+    setTimeout(() => {const randomIndex = Math.floor(Math.random() * state.gameControls.length) +1;
     
     const newGameArray = [...state.gameArray, randomIndex]
   
@@ -13,5 +15,6 @@ export const startNewRound = (gameArray, state, setState) => {
       playerArray: [],
     }));
     
-    animateGameArray(newGameArray, setState)
+    animateGameArray(newGameArray, setState)},750)
+    
   }
