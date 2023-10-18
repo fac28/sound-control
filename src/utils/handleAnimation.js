@@ -19,5 +19,5 @@ export const handleAnimation = (setState, value) => {
         return control;
       }),
     }));
-  }, 200);
+  }, 400);
 };

@@ -13,5 +13,5 @@ export const startNewRound = (gameArray, state, setState) => {
       isPlaying: true, // Game is in progress
     }));
     
-    animateGameArray(gameArray, setState)
+    animateGameArray(newGameArray, setState)
   }

@@ -7,6 +7,7 @@ function App() {
   const [state, setState] = useState({
     playerArray: [],
     gameArray: [],
+    isPlaying: false,
     gameControls: [
       {
         colour: 'red',
@@ -27,27 +28,7 @@ function App() {
         colour: 'yellow',
         index: 4,
         isAnimated: false,
-      },
-      {
-        colour: 'red',
-        index: 5,
-        isAnimated: false,
-      },
-      {
-        colour: 'blue',
-        index: 6,
-        isAnimated: false,
-      },
-      {
-        colour: 'green',
-        index: 7,
-        isAnimated: false,
-      },
-      {
-        colour: 'yellow',
-        index: 8,
-        isAnimated: false,
-      },
+      }
     ],
   });
 
