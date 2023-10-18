@@ -1,1 +1,53 @@
 /* css here */
+
+.pad {
+  width: 5rem;
+  height: 5rem;
+  margin: 1rem;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.flex {
+  display: flex;
+}
+
+.center {
+  justify-content: center;
+}
+
+.gap {
+  gap: 1rem;
+}
+
+.red {
+  background: rgb(243, 76, 76);
+}
+
+.blue {
+  background: rgb(65, 65, 247);
+}
+
+.green {
+  background: rgb(73, 241, 73);
+}
+
+.yellow {
+  background: rgb(250, 250, 53);
+}
+
+@keyframes flash {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.element-animate {
+  animation: flash 400ms 1;
+}
