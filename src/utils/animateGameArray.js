@@ -11,12 +11,6 @@ export const animateGameArray = (gameArray, setState) => {
     } else {
       // The entire gameArray has been animated
       clearInterval(interval);
-
-      // Allow the player to interact
-      setState((prevState) => ({
-        ...prevState,
-        isPlaying: false,
-      }));
     }
   }, 500);
 };
