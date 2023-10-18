@@ -6,6 +6,7 @@ import { initialState } from './utils/global';
 import PlayButton from './components/PlayButton';
 import ResetButton from './components/ResetButton';
 
+
 function App() {
   const [state, setState] = useState(initialState);
 
@@ -25,6 +26,7 @@ function App() {
               isPlaying={state.isPlaying}
               playerArray={state.playerArray}
               gameArray={state.gameArray}
+              gameOver={state.gameOver}
               state={state}
             />
           );
@@ -37,6 +39,14 @@ function App() {
           <ResetButton setState={setState} />
         )}
       </div>
+      {state.gameOver ? (
+        <div className="flex center column">
+          <p>Game Over</p> 
+          <p>Score: {state.gameArray.length - 1}</p>
+        </div>
+      ) : (
+        ''
+      )}
     </>
   );
 }

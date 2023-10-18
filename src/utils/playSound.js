@@ -1,3 +1,4 @@
+
 export function playSound(currentIndex) {
   audio.src = soundUrls[currentIndex];
   audio.play();

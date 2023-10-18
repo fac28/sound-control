@@ -1,9 +1,9 @@
 import { handleAnimation } from '../utils/handleAnimation';
 import { compareArrays } from '../utils/compareArrays';
 import { startNewRound } from '../utils/startNewRound';
-import { gameOver } from '../gameOver';
+import { gameOver } from '../utils/gameOver';
 
-const Pad = ({ colour, setState, value, isAnimated, border, playerArray, gameArray, state }) => {
+const Pad = ({ colour, setState, value, isAnimated, isPlaying, playerArray, gameArray, state, gameOver }) => {
   const clickHandler = (event) => {
     const newPlayerArray = [...playerArray, +event.target.value];
 
@@ -23,8 +23,12 @@ const Pad = ({ colour, setState, value, isAnimated, border, playerArray, gameArr
         startNewRound(gameArray, state, setState);
       }
     } else {
-      gameOver(setState);
-      return console.log('Game Over');
+      setState((prevState) => ({
+        ...prevState,
+        gameOver: true,
+      }));
+
+  
     }
   };
   return (
@@ -35,6 +39,7 @@ const Pad = ({ colour, setState, value, isAnimated, border, playerArray, gameArr
       onClick={clickHandler}
     ></button>
   );
+  
 };
 
 export default Pad;
