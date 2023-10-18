@@ -1,5 +1,8 @@
-import audio1 from '../assets/1.mp3';
+import audio1 from '../assets/3.mp3';
 import audio2 from '../assets/2.mp3';
+import audio3 from '../assets/4.mp3';
+import audio4 from '../assets/5.mp3';
+import audio5 from '../assets/6.mp3';
 
 export const initialState = {
   playerArray: [],
@@ -25,21 +28,21 @@ export const initialState = {
       colour: 'green',
       index: 3,
       isAnimated: false,
-      sound: new Audio(audio2), 
+      sound: new Audio(audio3), 
       border: 'l-t'
     },
     {
       colour: 'yellow',
       index: 4,
       isAnimated: false,
-      sound: new Audio(audio2), 
+      sound: new Audio(audio4), 
       border: 'r-t'
     },
     {
       colour: 'pink',
       index: 5,
       isAnimated: false,
-      sound: new Audio(audio1),
+      sound: new Audio(audio5),
       border: 'l-b'
     },
     {
