@@ -32,21 +32,21 @@ function App() {
           );
         })}
       </div>
-      <div className="flex center gap margin-top">
+      {state.gameOver ? (
+        <div className="flex center column">
+          <p className='glow small-font'>Game Over</p> 
+          <p className='glow small-font'>Score: {state.gameArray.length - 1}</p>
+        </div>
+      ) : (
+        ''
+      )}
+      <div className="flex center margin-top">
         {!state.isPlaying ? (
           <PlayButton gameArray={state.gameArray} gameControls={state.gameControls} setState={setState} state={state} />
         ) : (
           <ResetButton setState={setState} />
         )}
       </div>
-      {state.gameOver ? (
-        <div className="flex center column">
-          <p>Game Over</p> 
-          <p>Score: {state.gameArray.length - 1}</p>
-        </div>
-      ) : (
-        ''
-      )}
     </>
   );
 }

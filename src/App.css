@@ -59,6 +59,10 @@ body {
   animation: glow 1s ease-in-out infinite alternate;
 }
 
+.small-font {
+  font-size: 3rem;
+}
+
 /* Border radiuses */
 
 .l-t {
