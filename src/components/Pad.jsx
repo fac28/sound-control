@@ -28,7 +28,7 @@ const Pad = ({ colour, setState, value, isAnimated, isPlaying, playerArray, game
         gameOver: true,
       }));
 
-      gameOver(setState)
+  
     }
   };
   return (

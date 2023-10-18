@@ -1,4 +1,5 @@
 import audio1 from '../assets/1.mp3';
+import audio2 from '../assets/2.mp3';
 
 export const initialState = {
   playerArray: [],
@@ -16,19 +17,19 @@ export const initialState = {
       colour: 'blue',
       index: 2,
       isAnimated: false,
-      sound: new Audio(audio1), 
+      sound: new Audio(audio2), 
     },
     {
       colour: 'green',
       index: 3,
       isAnimated: false,
-      sound: new Audio(audio1), 
+      sound: new Audio(audio2), 
     },
     {
       colour: 'yellow',
       index: 4,
       isAnimated: false,
-      sound: new Audio(audio1), 
+      sound: new Audio(audio2), 
     },
   ],
 };
