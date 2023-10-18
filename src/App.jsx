@@ -12,8 +12,8 @@ function App() {
 
   return (
     <>
-      <h1>Sound Control</h1>
-      <div className="flex center">
+      <h1 className='glow'>Sound Control</h1>
+      <div className="flex center width margin-top">
         {state.gameControls.map((pad) => {
           return (
             <Pad
@@ -22,6 +22,7 @@ function App() {
               value={pad.index}
               setState={setState}
               isAnimated={pad.isAnimated}
+              border={pad.border}
               isPlaying={state.isPlaying}
               playerArray={state.playerArray}
               gameArray={state.gameArray}
@@ -31,7 +32,7 @@ function App() {
           );
         })}
       </div>
-      <div className="flex center gap">
+      <div className="flex center gap margin-top">
         {!state.isPlaying ? (
           <PlayButton gameArray={state.gameArray} gameControls={state.gameControls} setState={setState} state={state} />
         ) : (

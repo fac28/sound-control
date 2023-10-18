@@ -32,14 +32,12 @@ const Pad = ({ colour, setState, value, isAnimated, isPlaying, playerArray, game
     }
   };
   return (
-    
-      <button
-        type="button"
-        className={`pad ${colour} ${isAnimated ? 'element-animate' : ''}`}
-        value={value}
-        onClick={clickHandler}
-      ></button>
-    
+    <button
+      type="button"
+      className={`pad ${colour} ${border} ${isAnimated ? 'element-animate' : ''}`}
+      value={value}
+      onClick={clickHandler}
+    ></button>
   );
   
 };
