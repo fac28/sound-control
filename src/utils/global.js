@@ -1,7 +1,27 @@
-export const PAD = {
-  GREEN: '0',
-  RED: '1',
-  YELLOW: '2',
-  BLUE: '3',
+export const initialState = {
+  playerArray: [],
+  gameArray: [],
+  isPlaying: false,
+  gameControls: [
+    {
+      colour: 'red',
+      index: 1,
+      isAnimated: false,
+    },
+    {
+      colour: 'blue',
+      index: 2,
+      isAnimated: false,
+    },
+    {
+      colour: 'green',
+      index: 3,
+      isAnimated: false,
+    },
+    {
+      colour: 'yellow',
+      index: 4,
+      isAnimated: false,
+    },
+  ],
 }
-

@@ -2,35 +2,12 @@ import './App.css';
 import Pad from './components/Pad';
 import ControlButton from './components/ControlButton';
 import { useState } from 'react';
+import { initialState } from './utils/global';
+import PlayButton from './components/PlayButton';
+import ResetButton from './components/ResetButton';
 
 function App() {
-  const [state, setState] = useState({
-    playerArray: [],
-    gameArray: [],
-    isPlaying: false,
-    gameControls: [
-      {
-        colour: 'red',
-        index: 1,
-        isAnimated: false,
-      },
-      {
-        colour: 'blue',
-        index: 2,
-        isAnimated: false,
-      },
-      {
-        colour: 'green',
-        index: 3,
-        isAnimated: false,
-      },
-      {
-        colour: 'yellow',
-        index: 4,
-        isAnimated: false,
-      },
-    ],
-  });
+  const [state, setState] = useState(initialState);
 
   return (
     <>
@@ -53,14 +30,11 @@ function App() {
         })}
       </div>
       <div className="flex center gap">
-        <ControlButton
-          control={'play'}
-          gameArray={state.gameArray}
-          gameControls={state.gameControls}
-          setState={setState}
-          state={state}
-        />
-        <ControlButton control={'pause'} />
+        {!state.isPlaying ? (
+          <PlayButton gameArray={state.gameArray} gameControls={state.gameControls} setState={setState} state={state} />
+        ) : (
+          <ResetButton setState={setState} />
+        )}
       </div>
     </>
   );

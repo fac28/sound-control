@@ -1,6 +1,7 @@
 import { handleAnimation } from '../utils/handleAnimation';
 import { compareArrays } from '../utils/compareArrays';
 import { startNewRound } from '../utils/startNewRound';
+import { gameOver } from '../gameOver';
 
 const Pad = ({ colour, setState, value, isAnimated, isPlaying, playerArray, gameArray, state }) => {
   const clickHandler = (event) => {
@@ -22,6 +23,7 @@ const Pad = ({ colour, setState, value, isAnimated, isPlaying, playerArray, game
         startNewRound(gameArray, state, setState);
       }
     } else {
+      gameOver(setState);
       return console.log('Game Over');
     }
   };
