@@ -28,7 +28,7 @@ function App() {
         colour: 'yellow',
         index: 4,
         isAnimated: false,
-      }
+      },
     ],
   });
 
@@ -45,6 +45,9 @@ function App() {
               setState={setState}
               isAnimated={pad.isAnimated}
               isPlaying={state.isPlaying}
+              playerArray={state.playerArray}
+              gameArray={state.gameArray}
+              state={state}
             />
           );
         })}
