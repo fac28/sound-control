@@ -32,28 +32,28 @@ export const initialState = {
       index: 3,
       isAnimated: false,
       sound: new Audio(audio3), 
-      border: 'l-t'
+      border: 'l-b'
     },
     {
       colour: 'yellow',
       index: 4,
       isAnimated: false,
       sound: new Audio(audio4), 
-      border: 'r-t'
+      border: 'r-b'
     },
     {
       colour: 'pink',
       index: 5,
       isAnimated: false,
       sound: new Audio(audio5),
-      border: 'l-b'
+      border: 'l-t'
     },
     {
       colour: 'orange',
       index: 6,
       isAnimated: false,
       sound: new Audio(audio6),
-      border: 'r-b'
+      border: 'r-t'
     },
     {
       colour: 'purple',
