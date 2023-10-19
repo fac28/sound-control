@@ -17,15 +17,15 @@ export const initialState = {
       colour: 'red',
       index: 1,
       isAnimated: false,
-      sound: new Audio(audio1), 
-      border: 'l-t'
+      sound: new Audio(audio1),
+      border: 'l-t',
     },
     {
       colour: 'blue',
       index: 2,
       isAnimated: false,
-      sound: new Audio(audio2), 
-      border: 'r-t'
+      sound: new Audio(audio2),
+      border: 'r-t',
     },
     {
       colour: 'green',
