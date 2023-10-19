@@ -1,6 +1,5 @@
 import './App.css';
 import Pad from './components/Pad';
-import ControlButton from './components/ControlButton';
 import { useState } from 'react';
 import { initialState } from './utils/global';
 import PlayButton from './components/PlayButton';
