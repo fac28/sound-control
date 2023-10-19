@@ -1,9 +1,8 @@
 import { handleAnimation } from '../utils/handleAnimation';
 import { compareArrays } from '../utils/compareArrays';
 import { startNewRound } from '../utils/startNewRound';
-import { gameOver } from '../utils/gameOver';
 
-const Pad = ({ colour, setState, value, isAnimated, isPlaying, playerArray, gameArray, state, gameOver, border }) => {
+const Pad = ({ colour, setState, value, isAnimated, playerArray, gameArray, state, border }) => {
   const clickHandler = (event) => {
     const newPlayerArray = [...playerArray, +event.target.value];
 
