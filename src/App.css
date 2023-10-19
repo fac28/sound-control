@@ -1,5 +1,6 @@
 body {
   background: #3c1642;
+  box-sizing: border-box;
 }
 
 .pad {
@@ -36,27 +37,42 @@ body {
   align-items: center;
 }
 
+.gap {
+  gap: 2rem;
+}
+
 .column {
   flex-direction: column;
 }
 
 .width {
-  max-width: 35rem;
+  max-width: 20rem;
 }
 
 .margin-top {
   margin-top: 5rem;
 }
 
+.margin-top-sm {
+  margin-top: 2 rem;
+}
+
 .glow {
   font-family: 'Neonderthaw', cursive;
-  margin-top: 3rem;
   font-size: 6rem;
   color: #fff;
   text-align: center;
   -webkit-animation: glow 1s ease-in-out infinite alternate;
   -moz-animation: glow 1s ease-in-out infinite alternate;
   animation: glow 1s ease-in-out infinite alternate;
+}
+
+.rotate {
+  animation: rotate 10s linear infinite;
+}
+
+.anti-rotate {
+  animation: anti-rotate 10s linear infinite;
 }
 
 .small-font {
@@ -156,6 +172,24 @@ body {
       0 0 60px #ff4da6,
       0 0 70px #ff4da6,
       0 0 80px #ff4da6;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes anti-rotate {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
   }
 }
 
