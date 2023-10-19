@@ -1,5 +1,3 @@
-
-
 export const handleAnimation = (setState, value) => {
   setState((prevState) => ({
     ...prevState,
@@ -22,5 +20,5 @@ export const handleAnimation = (setState, value) => {
         return control;
       }),
     }));
-  }, 500);
+  }, 1000);
 };
