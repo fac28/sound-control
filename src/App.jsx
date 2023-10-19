@@ -5,11 +5,16 @@ import { initialState } from './utils/global';
 import PlayButton from './components/PlayButton';
 import ResetButton from './components/ResetButton';
 
+import { backgroundSong } from './utils/backgroundSong';
+
 function App() {
   const [state, setState] = useState(initialState);
 
   return (
     <>
+      <button onClick={backgroundSong} className="button glow play">
+        &#9654;
+      </button>
       <h1 className="glow">Sound Control</h1>
       <div className="flex center width margin-top">
         {state.gameControls.map((pad) => {
@@ -33,7 +38,9 @@ function App() {
       {state.gameOver && (
         <div className="flex center column">
           <p className="glow small-font">Game Over</p>
-          <p className="glow small-font">Score: {state.gameArray.length - 1}</p>
+          <p className="glow small-font">
+            Score: {state.gameArray.length - 1}
+          </p>
         </div>
       )}
 

@@ -1,4 +1,6 @@
+
 export const handleAnimation = (setState, value) => {
+ 
   setState((prevState) => ({
     ...prevState,
     gameControls: prevState.gameControls.map((control) => {
