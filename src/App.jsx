@@ -5,19 +5,19 @@ import { initialState } from './utils/global';
 import PlayButton from './components/PlayButton';
 import ResetButton from './components/ResetButton';
 
-import { backgroundSong } from './utils/backgroundSong';
+import { pauseBackgroundSong, playBackgroundSong } from './utils/backgroundSong';
+import MusicControl from './components/MusicControl';
 
 function App() {
   const [state, setState] = useState(initialState);
 
   return (
     <>
-      <button onClick={backgroundSong} className="button glow play">
-        &#9654;
-      </button>
+      {state.music ? <MusicControl clickHandler={pauseBackgroundSong} setState={setState}>&#9646;&#9646;</MusicControl> : 
+      <MusicControl clickHandler={playBackgroundSong} setState={setState}>&#9654;</MusicControl>}
       <h1 className="glow">Sound Control</h1>
-      <div className="flex">
-        <div className="flex center width margin-top anti-rotate">
+      <div className="flex max-width-md center">
+        <div className="flex center max-width-sm margin-top anti-rotate">
           {state.gameControls.map((pad, index) => {
             if (index < 4) {
               return (
@@ -38,7 +38,7 @@ function App() {
             }
           })}
         </div>
-        <div className="flex center width margin-top rotate">
+        <div className="flex center max-width-sm margin-top rotate">
           {state.gameControls.map((pad, index) => {
             if (index > 3) {
               return (

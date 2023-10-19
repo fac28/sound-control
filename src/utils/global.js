@@ -8,6 +8,7 @@ import audio7 from '../assets/7.mp3';
 import audio8 from '../assets/8.mp3';
 
 export const initialState = {
+  music: false,
   playerArray: [],
   gameArray: [],
   isPlaying: false,
