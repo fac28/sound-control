@@ -16,27 +16,52 @@ function App() {
         &#9654;
       </button>
       <h1 className="glow">Sound Control</h1>
-      <div className="flex center width margin-top">
-        {state.gameControls.map((pad) => {
-          return (
-            <Pad
-              colour={pad.colour}
-              key={pad.index}
-              value={pad.index}
-              setState={setState}
-              isAnimated={pad.isAnimated}
-              border={pad.border}
-              isPlaying={state.isPlaying}
-              playerArray={state.playerArray}
-              gameArray={state.gameArray}
-              gameOver={state.gameOver}
-              state={state}
-            />
-          );
-        })}
+      <div className="flex">
+        <div className="flex center width margin-top anti-rotate">
+          {state.gameControls.map((pad, index) => {
+            if (index < 4) {
+              return (
+                <Pad
+                  colour={pad.colour}
+                  key={pad.index}
+                  value={pad.index}
+                  setState={setState}
+                  isAnimated={pad.isAnimated}
+                  border={pad.border}
+                  isPlaying={state.isPlaying}
+                  playerArray={state.playerArray}
+                  gameArray={state.gameArray}
+                  gameOver={state.gameOver}
+                  state={state}
+                />
+              );
+            }
+          })}
+        </div>
+        <div className="flex center width margin-top rotate">
+          {state.gameControls.map((pad, index) => {
+            if (index > 3) {
+              return (
+                <Pad
+                  colour={pad.colour}
+                  key={pad.index}
+                  value={pad.index}
+                  setState={setState}
+                  isAnimated={pad.isAnimated}
+                  border={pad.border}
+                  isPlaying={state.isPlaying}
+                  playerArray={state.playerArray}
+                  gameArray={state.gameArray}
+                  gameOver={state.gameOver}
+                  state={state}
+                />
+              );
+            }
+          })}
+        </div>
       </div>
       {state.gameOver && (
-        <div className="flex center column">
+        <div className="flex gap center">
           <p className="glow small-font">Game Over</p>
           <p className="glow small-font">
             Score: {state.gameArray.length - 1}
