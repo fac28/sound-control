@@ -2,7 +2,11 @@ import { gameOver } from '../utils/gameOver';
 
 const ResetButton = ({ setState }) => {
   return (
-    <button type="button" className="button" onClick={() => gameOver(setState)}>
+    <button
+      type="button"
+      className="button"
+      onClick={() => gameOver(setState)}
+    >
       Reset
     </button>
   );

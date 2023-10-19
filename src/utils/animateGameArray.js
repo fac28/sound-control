@@ -14,5 +14,3 @@ export const animateGameArray = (gameArray, setState) => {
     }
   }, 500);
 };
-
-

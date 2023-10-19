@@ -39,7 +39,12 @@ function App() {
 
       <div className="flex center margin-top">
         {!state.isPlaying ? (
-          <PlayButton gameArray={state.gameArray} gameControls={state.gameControls} setState={setState} state={state} />
+          <PlayButton
+            gameArray={state.gameArray}
+            gameControls={state.gameControls}
+            setState={setState}
+            state={state}
+          />
         ) : (
           <ResetButton setState={setState} />
         )}
