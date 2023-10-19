@@ -13,10 +13,10 @@ export const animateGameArray = (gameArray, setState) => {
       }, delay);
 
       // Set a longer delay for subsequent animations
-      delay = 750;
+      delay = 50;
     } else {
       // The entire gameArray has been animated
       clearInterval(interval);
     }
-  }, 750); // The interval checks every 1000ms
+  }, 1000); // The interval checks every 1000ms
 };
