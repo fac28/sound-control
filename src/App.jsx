@@ -6,13 +6,12 @@ import { initialState } from './utils/global';
 import PlayButton from './components/PlayButton';
 import ResetButton from './components/ResetButton';
 
-
 function App() {
   const [state, setState] = useState(initialState);
 
   return (
     <>
-      <h1 className='glow'>Sound Control</h1>
+      <h1 className="glow">Sound Control</h1>
       <div className="flex center width margin-top">
         {state.gameControls.map((pad) => {
           return (
@@ -32,14 +31,13 @@ function App() {
           );
         })}
       </div>
-      {state.gameOver ? (
+      {state.gameOver && (
         <div className="flex center column">
-          <p className='glow small-font'>Game Over</p> 
-          <p className='glow small-font'>Score: {state.gameArray.length - 1}</p>
+          <p className="glow small-font">Game Over</p>
+          <p className="glow small-font">Score: {state.gameArray.length - 1}</p>
         </div>
-      ) : (
-        ''
       )}
+
       <div className="flex center margin-top">
         {!state.isPlaying ? (
           <PlayButton gameArray={state.gameArray} gameControls={state.gameControls} setState={setState} state={state} />
