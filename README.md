@@ -12,7 +12,7 @@ You can install and run the game locally by following these steps:
 
 ```sh
 git clone https://github.com/yourusername/simon-says-game.git
-   ```
+```
 
 2. Navigate to the project directory:
 
@@ -35,7 +35,7 @@ npm install
 npm run dev
 ```
 
-Now you can open the game in your web browser at http://localhost:3000.
+Now you can open the game in your web browser at http://localhost:5173.
 
 # How to Play
 
